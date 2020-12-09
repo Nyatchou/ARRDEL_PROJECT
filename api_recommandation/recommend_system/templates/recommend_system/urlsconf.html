@@ -1,0 +1,15 @@
+{% extends "recommend_system/layout.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class='container'>
+    <div class='container m-t-40'>
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <div class="align-content-center text-center">
+                <button type="submit" class="btn btn-primary btn-flat" value="Valider"> Valider </button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

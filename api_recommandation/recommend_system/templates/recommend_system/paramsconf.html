@@ -1,0 +1,14 @@
+{% extends "recommend_system/layout.html" %}
+{% block content %}
+<div class='container'>
+    <div class='container m-t-60'>
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div class="align-content-center text-left">
+                <button type="submit" class="btn btn-primary btn-flat" value="Valider"> Valider </button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,35 @@
+{%load static%}
+{% load crispy_forms_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+
+        </title>
+        <link href="{% static 'projects_similarities_computer/css/bootstrap.css'%}" rel="stylesheet" type="text/css" media="all" />
+        <link href="{% static 'projects_similarities_computer/css/mdb.css'%}" rel="stylesheet" type="text/css" media="all" />
+        <link href="{% static 'projects_similarities_computer/css/util.css'%}" rel="stylesheet" type="text/css" media="all" />
+
+    </head>
+    <body>
+        <div class='container'>
+            <div class='container m-t-40'>
+                <form action="" method="post">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    <div class="align-content-center text-center">
+                        <button type="submit" class="btn btn-primary btn-flat" value="Valider"> Valider </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script type="text/javascript" src="{%static 'projects_similarities_computer/js/jquery-3.3.1.min.js'%}"></script>
+        
+        <script type="text/javascript" src="{%static 'projects_similarities_computer/js/bootstrap.min.js'%}"></script>
+        <script type="text/javascript" src="{%static 'projects_similarities_computer/js/popper.min.js'%}"></script>
+
+    </body>
+</html>

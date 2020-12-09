@@ -1,0 +1,26 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            {% block title %}
+            {% endblock %}
+        </title>
+        <link href="{% static 'recommend_system/css/bootstrap.css'%}" rel="stylesheet" type="text/css" media="all" />
+        <link href="{% static 'recommend_system/css/mdb.css'%}" rel="stylesheet" type="text/css" media="all" />
+        <link href="{% static 'recommend_system/css/util.css'%}" rel="stylesheet" type="text/css" media="all" />
+
+    </head>
+    <body>
+
+        {% block content %}
+
+        {% endblock%}
+        <script type="text/javascript" src="{%static 'recommend_system/js/jquery-3.3.1.min.js'%}"></script>
+
+        <script type="text/javascript" src="{%static 'recommend_system/js/bootstrap.min.js'%}"></script>
+        <script type="text/javascript" src="{%static 'recommend_system/js/popper.min.js'%}"></script>
+    </body>
+</html>
